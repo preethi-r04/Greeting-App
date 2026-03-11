@@ -32,4 +32,7 @@ public class GreetingService {
 
         return greetingRepository.save(greeting);
     }
+    public Greeting getGreetingById(Long id) {
+        return greetingRepository.findById(id).orElse(null);
+    }
 }
